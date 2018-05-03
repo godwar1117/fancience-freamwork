@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/jee
+	http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://code.alibabatech.com/schema/dubbo
+	http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	default-lazy-init="false">
+
+	<!--<context:property-placeholder location="classpath:config.properties"/>-->
+
+	<dubbo:application name="${dubbo.name}" logger="slf4j" />
+	<dubbo:registry address="${dubbo.protocol.port}" check="false" />
+	<dubbo:annotation package="${dubbo.package}" />
+	<dubbo:protocol name="dubbo" port="${dubbo.server.port}" host="${dubbo.server.host}" />
+	<dubbo:consumer check="false" />
+
+	<!--
+	<dubbo:application name="ngk-homework-provider-consumer" logger="slf4j" />
+	<dubbo:registry address="zookeeper://192.168.1.137:2181?client=curator" />
+	<dubbo:protocol name="dubbo" port="20880"/>
+	<dubbo:annotation package="com.ngkidschina.homework" />
+	-->
+	<!--
+	<dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" threads="${dubbo.protocol.threads}" />
+	<dubbo:annotation package="org.ibase4j" />
+	<dubbo:consumer timeout="${dubbo.timeout}" loadbalance="leastactive" check="false" retries="0" />
+	-->
+</beans>

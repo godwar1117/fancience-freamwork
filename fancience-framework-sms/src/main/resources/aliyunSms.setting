@@ -1,0 +1,11 @@
+# access_key_id
+access_key_id = LTAIooLL7m5Yt6Bc
+# access_key_secret
+access_key_secret = zGZMbS0JA6m9GaSRmHgIbmclti4Btz
+
+# 短信签名
+sign_name_general = 凡智教育
+
+# 短信模板 code
+template_code_register = SMS_129756549
+template_code_changepwd = SMS_130210111

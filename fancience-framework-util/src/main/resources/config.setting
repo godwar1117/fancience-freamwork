@@ -1,0 +1,10 @@
+# -------------------------------------------------------------
+# ----- Setting File with UTF8-----
+# ----- 工具模块配置文件 -----
+# -------------------------------------------------------------
+
+# openoffice配置项
+[openoffice]
+linux.openoffice.path =
+mac.openoffice.path = /Applications/OpenOffice.app/Contents
+windows.openoffice.path =
